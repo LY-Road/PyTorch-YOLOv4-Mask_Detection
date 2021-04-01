@@ -31,3 +31,5 @@ labels：https://pan.baidu.com/s/1L-fYqoylbEKMyiKXCXz-7g 提取码：szqg
 ### 测试
 >$ python test.py --img 640 --conf 0.001 --batch 8 --device 0 --data coco.yaml --cfg cfg/yolov4-pacsp.cfg --weights weights/best.pth
  
+### 参考代码
+https://github.com/WongKinYiu/PyTorch_YOLOv4
