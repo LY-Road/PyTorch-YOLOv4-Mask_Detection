@@ -7,7 +7,7 @@ images：https://pan.baidu.com/s/1m-4Z80T4IBtJXrlJrRW9pg 提取码：zpbw
 labels：https://pan.baidu.com/s/1L-fYqoylbEKMyiKXCXz-7g 提取码：szqg  
 
 ### 口罩数据集预训练模型
-链接：https://pan.baidu.com/s/1jQVOnqoy0HAswB67R8BQ0w 提取码：gypi
+链接：https://pan.baidu.com/s/1jQVOnqoy0HAswB67R8BQ0w 提取码：gypi  
 将下载好的模型放在weights文件夹下。
 
 ### 数据处理
@@ -17,7 +17,7 @@ labels：https://pan.baidu.com/s/1L-fYqoylbEKMyiKXCXz-7g 提取码：szqg
 找到data/coco128.yaml，需要修改的内容如下：
 > train: data/mydata/train.txt/   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  # 训练数据路径  
 > val: data/mydata/valid.txt/     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  # 验证数据路径  
-> test: data/mydata/valid.txt/     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  # 测试数据路径，这里用的是验证集数据，也可以选择其他数据 
+> test: data/mydata/valid.txt/     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  # 测试数据路径，这里用的是验证集数据，也可以选择其他数据   
 > nc: 2                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # num_classes=2  
 > names: ['face_not_mask','face_mask'] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # claes_name
 
