@@ -1,5 +1,9 @@
 # PyTorch-YOLOv4-Mask_Detection
 ● 使用YOLOv4实现口罩佩戴检测
+训练100个epochs，在验证集上效果
+Class|Precision|Recall|mAP@.5
+--|--|--|--
+all|0.79|0.906|0.918
 ### 配置环境
 > $ pip3 install -r requirements.txt
 ### 下载数据集 
