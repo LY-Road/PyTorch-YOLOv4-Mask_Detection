@@ -40,9 +40,9 @@ labels：https://pan.baidu.com/s/1L-fYqoylbEKMyiKXCXz-7g 提取码：szqg
 >$ python3 test.py --device 0 --data coco.yaml --cfg cfg/yolov4-pacsp.cfg --weights weights/best_yolov4-pacsp.pt
 
 ### 检测
->$ python3 detect.py --device 0 --data coco.yaml --cfg cfg/yolov4-pacsp.cfg --weights weights/best_yolov4-pacsp.pt --source 0
+>$ python3 detect.py --device 0 --cfg cfg/yolov4-pacsp.cfg --weights weights/best_yolov4-pacsp.pt --source 0
 
-使用摄像头，也可以使用图片等。
+source是使用摄像头，也可以使用图片等。
  
 ### 参考代码
 https://github.com/WongKinYiu/PyTorch_YOLOv4
