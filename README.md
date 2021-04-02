@@ -11,7 +11,7 @@ images：https://pan.baidu.com/s/1m-4Z80T4IBtJXrlJrRW9pg 提取码：zpbw
 labels：https://pan.baidu.com/s/1L-fYqoylbEKMyiKXCXz-7g 提取码：szqg  
 
 ### 口罩数据集预训练模型
-链接：https://pan.baidu.com/s/1jQVOnqoy0HAswB67R8BQ0w 提取码：gypi  
+链接： 提取码：
 将下载好的模型放在weights文件夹下。
 
 ### 数据处理
@@ -25,16 +25,24 @@ labels：https://pan.baidu.com/s/1L-fYqoylbEKMyiKXCXz-7g 提取码：szqg
 > names: ['face_not_mask','face_mask'] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # claes_name
 ### 修改模型配置文件
 找到cfg/yolov4-pacsp.cfg，搜索[yolo]，将[yolo]上面的filters=255修改为filters=21，下面的classes=80修改为classes=2，总共有三个位置需要修改。
-
+### 修改name配置文件
+找到data/coco.names,将里面的内容修改为：
+>face_not_mask  
+>face_mask  
 ### 训练
 执行如下代码：
->$ python train.py --device 0 --batch-size 16 --img 640 640 --data coco.yaml --cfg cfg/yolov4-pacsp.cfg --name yolov4-pacsp
+>$ python3 train.py --device 0 --data coco.yaml --cfg cfg/yolov4-pacsp.cfg --name yolov4-pacsp
 
 加载预训练权重执行如下代码：
->$ python train.py --device 0 --batch-size 16 --img 640 640 --data coco.yaml --cfg cfg/yolov4-pacsp.cfg --weights weights/best.pth --name yolov4-pacsp
+>$ python3 train.py --device 0 --data coco.yaml --cfg cfg/yolov4-pacsp.cfg --weights weights/best_yolov4-pacsp.pt --name yolov4-pacsp
 
 ### 测试
->$ python test.py --img 640 --conf 0.001 --batch 8 --device 0 --data coco.yaml --cfg cfg/yolov4-pacsp.cfg --weights weights/best.pth
+>$ python3 test.py --device 0 --data coco.yaml --cfg cfg/yolov4-pacsp.cfg --weights weights/best_yolov4-pacsp.pt
+
+### 检测
+>$ python3 detect.py --device 0 --data coco.yaml --cfg cfg/yolov4-pacsp.cfg --weights weights/best_yolov4-pacsp.pt --source 0
+
+使用摄像头，也可以使用图片等。
  
 ### 参考代码
 https://github.com/WongKinYiu/PyTorch_YOLOv4
