@@ -1,5 +1,5 @@
 # PyTorch-YOLOv4-Mask_Detection
-● 使用YOLOv4实现口罩佩戴检测
+● 使用YOLOv4实现口罩佩戴检测  
 训练100个epochs，在验证集上效果
 Class|Precision|Recall|mAP@.5
 --|--|--|--
@@ -11,7 +11,7 @@ images：https://pan.baidu.com/s/1m-4Z80T4IBtJXrlJrRW9pg 提取码：zpbw
 labels：https://pan.baidu.com/s/1L-fYqoylbEKMyiKXCXz-7g 提取码：szqg  
 
 ### 口罩数据集预训练模型
-链接： 提取码：
+链接：https://pan.baidu.com/s/1gsuVsMEzXcv6ZBoONuyQIA 提取码：2inw
 将下载好的模型放在weights文件夹下。
 
 ### 数据处理
